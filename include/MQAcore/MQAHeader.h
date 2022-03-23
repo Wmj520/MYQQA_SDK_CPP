@@ -2,7 +2,10 @@
 #ifndef __MQA_HEADER__
 #define __MQA_HEADER__
 #include <MQAconfig.h>
+#if !defined MYQQA
 #define MYQQA
+#define MYQQAVER "1.0.3"
+#endif
 #if (!defined (MYQQ)) && (!defined MYQQA)
 #error 请在"MQHeader.H"确定你使用的MYQQ版本！
 #elif (defined MYQQ) && (defined MYQQA)
