@@ -133,7 +133,7 @@ public:
 		return _Da == _Data;
 	}
 };
-#define parseJsonToStruct(_json, _struct, _attr)	JsonParser::read(&_json, {"_attr"}, _struct.##_attr);
+#define parseJsonToStruct(_json, _struct, _attr)	JsonParser::read(&_json, {#_attr}, _struct.##_attr);
 #define parseJson(_attr) parseJsonToStruct(_json, _event, _attr)
 #define parseStruct(_attr) _json[#_attr] = _event.#_attr
 #endif

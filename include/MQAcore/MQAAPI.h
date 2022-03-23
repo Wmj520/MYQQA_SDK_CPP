@@ -163,7 +163,7 @@ namespace MQA::ÎÄ±¾´úÂë
 		return _str;
 	}
 }
-namespace MQA
+namespace MQA::Api
 {
 	namespace FrameAPI
 	{

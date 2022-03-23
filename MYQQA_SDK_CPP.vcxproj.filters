@@ -95,10 +95,17 @@
     <ClInclude Include="include\json\myJson.hpp">
       <Filter>头文件\json</Filter>
     </ClInclude>
+    <ClInclude Include="include\MQAconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GlobalVar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\MQAcore\MyQQAAPI.inc">
       <Filter>头文件\MQAcore</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

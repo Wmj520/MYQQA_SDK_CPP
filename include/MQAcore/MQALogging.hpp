@@ -13,11 +13,11 @@ namespace MQA
 		{
 			void __LOG(const char* _logMsg)final
 			{
-				FrameAPI::OutPut(_logMsg);
+				Api::FrameAPI::OutPut(_logMsg);
 			}
 		};
 	}
-	namespace logging
+	namespace Logging
 	{
 #define Logger(__Level) static inline void __Level(Text _msg)\
 		{\

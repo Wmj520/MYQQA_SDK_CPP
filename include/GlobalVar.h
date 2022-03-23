@@ -5,11 +5,10 @@
 #include <detail/ThreadPool.hpp>
 #include <MQAcore/MQAType.h>
 
-extern std::atomic<bool> APIInitSuccess;
-extern std::atomic<bool> PluginEnable;
+extern std::atomic<bool> PluginLoad;
 extern std::atomic<bool> EventContInit;
 extern ThreadPool::TPool p;
-extern HMODULE MQHModule;
+extern HMODULE MQAHModule;
 extern HMODULE DllHModule;
 
 #ifdef USE_TIMER

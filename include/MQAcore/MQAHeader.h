@@ -1,6 +1,7 @@
 #pragma once
 #ifndef __MQA_HEADER__
 #define __MQA_HEADER__
+#include <MQAconfig.h>
 #define MYQQA
 #if (!defined (MYQQ)) && (!defined MYQQA)
 #error 请在"MQHeader.H"确定你使用的MYQQ版本！
@@ -11,7 +12,7 @@
 #define APIDLLNAME "MyQQAApi.dll"
 
 #if !defined USE_CMAKE
-#define PluginId "myqqacpp"
+#define PluginId "MYQQA_SDK_CPP"
 #define PluginAuthor "you"
 #define PluginDesc "plugin information"
 #define PluginVer "1.0.0"
