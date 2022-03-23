@@ -1,4 +1,4 @@
-# MYQQA_SDK_CPP
+# MYQQA_SDK_CPP_Ver1.0.3
 
 MYQQA_SDK_CPP封装了提供给MQA的DLL接口相关的底层逻辑，为插件编程者提供更现代的C++接口。
 
@@ -63,9 +63,9 @@ MQA_REGISTER_EVENT
 }
 ```
 
-### 简介
+### 介绍
 
-- `MQA::Api` 命名空间封装了MQA提供的大部分api接口，现更新到MyQQA `1.0.2` 版本
+- `MQA::Api` 命名空间封装了MQA提供的大部分api接口，现更新到MyQQA `1.0.3` 版本
 - `MQA::文本代码` 命名空间提供了快速构造MQA文本代码的接口
 - `MQA::Enum`命名空间封装了MQA相关常量 `MQAEventEnum` 、事件返回值 `EventRet`...
 - `MQA::Event` 命名空间提供了注册MQA各事件回调函数接口，如` reg_PrivateMsg`，并且封装了MQA各事件的数据类，如 `PrivateEvent` 等，将在事件回调函数中传入
@@ -79,7 +79,7 @@ MQA_REGISTER_EVENT
 
 ### 修改插件信息
 
-请在 [`MQAHeader.h`](include/MQcore/MQHeader.h) 文件修改插件相关的 `Id` 、`Author`、`Desc` 、`Version` 信息，并将项目重命名为你的插件名，并且该项需要与 `PluginId` 宏一致，否则插件将会载入失败。
+请在 [`MQAHeader.h`](include/MQcore/MQHeader.h) 文件修改插件相关的 `PluginId` 、`PluginAuthor`、`PluginDesc` 、`PluginVersion` 信息，并将项目重命名为你的插件名，并且项目名需要与 `PluginId` 宏一致，否则插件可能会载入失败。
 
 ### 编写插件
 
@@ -98,3 +98,7 @@ MQA_REGISTER_EVENT
 ### 注意事项
 
 - 该SDK运行需安装 Visual C++ 可再发行软件包，请提醒用户安装，下载地址见 [最新支持的 Visual C++ 下载](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads)。
+
+### 问题反馈
+
+如果使用该sdk过程中遇到任何问题、Bug，或有其它意见或建议，欢迎提 issue ，或者加 **QQ2216193879** 交流讨论。
