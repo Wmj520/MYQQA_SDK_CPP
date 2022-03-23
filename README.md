@@ -1,4 +1,4 @@
-# MYQQA_SDK_CPP_Ver1.0.3
+# MYQQA_SDK_CPP_Ver1.0.5
 
 MYQQA_SDK_CPP封装了提供给MQA的DLL接口相关的底层逻辑，为插件编程者提供更现代的C++接口。
 
@@ -65,7 +65,7 @@ MQA_REGISTER_EVENT
 
 ### 介绍
 
-- `MQA::Api` 命名空间封装了MQA提供的大部分api接口，现更新到MyQQA `1.0.3` 版本
+- `MQA::Api` 命名空间封装了MQA提供的大部分api接口，现更新到MyQQA `1.0.5` 版本
 - `MQA::文本代码` 命名空间提供了快速构造MQA文本代码的接口
 - `MQA::Enum`命名空间封装了MQA相关常量 `MQAEventEnum` 、事件返回值 `EventRet`...
 - `MQA::Event` 命名空间提供了注册MQA各事件回调函数接口，如` reg_PrivateMsg`，并且封装了MQA各事件的数据类，如 `PrivateEvent` 等，将在事件回调函数中传入

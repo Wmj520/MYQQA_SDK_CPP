@@ -284,6 +284,27 @@ namespace MQA::Api
 	}
 	namespace FriendAPI
 	{
+
+		//访问对象QQ空间
+		inline bool BrowseQzone(LLInteger botQQ, LLInteger objQQ, Str log)
+		{
+			return MQA::Detail::BrowseQzone(StrToText(botQQ), StrToText(objQQ), StrToText(log));
+		}
+		//删除好友
+		inline bool DelFriend(LLInteger botQQ, LLInteger objQQ)
+		{
+			return MQA::Detail::DelFriend(StrToText(botQQ), StrToText(objQQ));
+		}
+		//设置特别关心
+		inline void SetSpecialCare(LLInteger botQQ, LLInteger objQQ)
+		{
+			return MQA::Detail::SetSpecialCare(StrToText(botQQ), StrToText(objQQ));
+		}
+		//置屏蔽用户 类型1 = 屏蔽 2 = 解除
+		inline void SetShieldedFriend(LLInteger botQQ, LLInteger objQQ, Integer type)
+		{
+			return MQA::Detail::SetShieldedFriend(StrToText(botQQ), StrToText(objQQ), StrToText(type));
+		}
 		/// <summary>
 		/// 取好友文件下载链接
 		/// </summary>
@@ -370,6 +391,17 @@ namespace MQA::Api
 	}
 	namespace GroupAPI
 	{
+
+		//群聊打卡，返回如：今日已成功打卡！
+		inline Str Groupclock(LLInteger botQQ, LLInteger groupId)
+		{
+			return MQA::Detail::Groupclock(StrToText(botQQ), StrToText(groupId));
+		}
+		//创建群聊，成功返回groupId等信息{ "ec":0,"errcode" : 0,"em" : "","gu" : 914856344,"gc" : 914856344 }，http模式创建群聊，请注意调用频率
+		inline Str CreateGroup(LLInteger botQQ, Str groupName, Str groupClass)
+		{
+			return MQA::Detail::CreateGroup(StrToText(botQQ), StrToText(groupName), StrToText(groupClass));
+		}
 		/// <summary>
 		/// 处理群验证
 		/// </summary>
@@ -690,6 +722,17 @@ namespace MQA::Api
 	}
 	namespace KeyAPI
 	{
+
+		//取指定域名Pskey
+		inline Text GetDomainPskey(LLInteger botQQ, Text address, Text appid, Text daid)
+		{
+			return MQA::Detail::GetDomainPskey(StrToText(botQQ), StrToText(address), StrToText(appid), StrToText(daid));
+		}
+		//获取Sessionkey
+		inline Text GetSessionkey(LLInteger botQQ)
+		{
+			return MQA::Detail::GetSessionkey(StrToText(botQQ));
+		}
 		//取cookies
 		inline Text GetCookies(LLInteger botQQ)
 		{
@@ -749,6 +792,12 @@ namespace MQA::Api
 	}
 	namespace AnotherAPI
 	{
+
+		//查询网址安全性，安全返回空，否则返回一个链接
+		inline Text GetUrlIsSafe(LLInteger botQQ, Str url)
+		{
+			return MQA::Detail::GetUrlIsSafe(StrToText(botQQ), StrToText(url));
+		}
 		//发送封包，结果十六进制到字节集
 		inline Text SendPacket(LLInteger botQQ, Str cmd, Str pack, Integer time_out)
 		{
@@ -858,6 +907,27 @@ namespace MQA::Api
 	}
 	namespace HBAPI
 	{
+
+		//获取红包msgno
+		inline Text GetRedPackMsgNo(LLInteger botQQ)
+		{
+			return MQA::Detail::GetRedPackMsgNo(StrToText(botQQ));
+		}
+		//获取红包vskey
+		inline Text GetRedPackVskey(LLInteger botQQ, LLInteger groupId, Text listid, Text authkey)
+		{
+			return MQA::Detail::GetRedPackVskey(StrToText(botQQ), StrToText(groupId), StrToText(listid), StrToText(authkey));
+		}
+		//红包数据加密
+		inline Text EncryptRedPackData(LLInteger botQQ, Text data, Integer random)
+		{
+			return MQA::Detail::EncryptRedPackData(StrToText(botQQ), StrToText(data), StrToText(random));
+		}
+		//红包数据解密
+		inline Text DecryptRedPackData(LLInteger botQQ, Text data, Integer random)
+		{
+			return MQA::Detail::DecryptRedPackData(StrToText(botQQ), StrToText(data), StrToText(random));
+		}
 		//查询红包领取详情，返回json
 		inline Text GetRedPackDetail(LLInteger botQQ, LLInteger groupId, Str listid, Str authkey)
 		{

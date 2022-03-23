@@ -1,9 +1,43 @@
 //MYQQA版本API
 
 /// <summary>
+/// MYQQA版本Ver1.0.5新增API
+/// </summary>
+//查询网址安全性，安全返回空，否则返回一个链接
+MQAAPI(GetUrlIsSafe, Text, LLInteger botQQ, Text url)
+//获取红包msgno
+MQAAPI(GetRedPackMsgNo,	Text, LLInteger botQQ)
+//获取红包vskey
+MQAAPI(GetRedPackVskey,	Text,LLInteger botQQ,LLInteger groupId,Text listid, Text authkey)
+//红包数据加密
+MQAAPI(EncryptRedPackData, Text, LLInteger botQQ,Text data,Integer random)
+//红包数据解密
+MQAAPI(DecryptRedPackData, 	Text, LLInteger botQQ,Text data, Integer random)
+//取指定域名Pskey
+MQAAPI(GetDomainPskey, Text, LLInteger botQQ, Text 跳转地址, Text appid, Text daid)
+//获取Sessionkey
+MQAAPI(GetSessionkey, Text, LLInteger botQQ)
+//访问对象QQ空间
+MQAAPI(BrowseQzone,	bool, LLInteger botQQ, LLInteger objQQ, Text log)
+
+
+/// <summary>
+/// MYQQA版本Ver1.0.4新增API
+/// </summary>
+//群聊打卡，返回如：今日已成功打卡！
+MQAAPI(Groupclock, Text, LLInteger botQQ,	LLInteger groupId)
+//创建群聊，成功返回groupId等信息{ "ec":0,"errcode" : 0,"em" : "","gu" : 914856344,"gc" : 914856344 }，http模式创建群聊，请注意调用频率
+MQAAPI(CreateGroup, Text, LLInteger botQQ, Text groupName ,Text groupClass)
+//删除好友
+MQAAPI(DelFriend, bool , LLInteger botQQ, LLInteger objQQ)
+//设置特别关心
+MQAAPI(SetSpecialCare, void, LLInteger botQQ, LLInteger objQQ)
+//置屏蔽用户 类型1 = 屏蔽 2 = 解除
+MQAAPI(SetShieldedFriend, void , LLInteger botQQ, LLInteger objQQ, Integer type)
+
+/// <summary>
 /// MYQQA版本Ver1.0.3新增API
 /// </summary>
-
 MQAAPI(ApplyGroupEventEx, Text, LLInteger botQQ, LLInteger groupId, LLInteger objQQ, LLInteger fromSeq, Integer op, Integer fromType, Text reason)
 MQAAPI(GetFriendFileDownUrl,Text, LLInteger botQQ, Text FileId, Text fileName)
 MQAAPI(InviteGroup_other, void, LLInteger botQQ, LLInteger fromGroupId, LLInteger objQQ, LLInteger toGroupId)
@@ -13,7 +47,6 @@ MQAAPI(GetBotStatus, Integer, Text botQQ)
 /// <summary>
 /// MYQQA版本Ver1.0.2前所有API
 /// </summary>
-
 MQAAPI(Output, void, Text content)
 MQAAPI(SendFriendMsg, Integer, LLInteger botQQ, LLInteger objQQ, Text msgContent, Integer req, LLInteger random)
 MQAAPI(SendFriendXMLMsg, Integer, LLInteger botQQ, LLInteger objQQ, Text msgContent, Integer req, LLInteger random)
